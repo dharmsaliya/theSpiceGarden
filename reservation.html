@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">The Spice Garden</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="menu.html">Menu</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link active" href="#">Reservation</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid w-100 p-0">
+        <div class="position-relative" style="height: 50vh;">
+            <img src="/images/book1.jpg" class="w-100 h-100 object-fit-cover" alt="Image">
+            <div
+                class="position-absolute bottom-0 start-50 translate-middle-x mb-3 p-3 rounded text-center text-white bg-dark bg-opacity-50">
+                <h1>Book a Table</h1>
+                <p>We'd love to host you!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <form id="reservationForm" novalidate>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Reservation Date</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="mb-3">
+                <label for="time" class="form-label">Reservation Time</label>
+                <input type="time" class="form-control" id="time" required>
+            </div>
+            <div class="mb-3">
+                <label for="guests" class="form-label">Number of Guests</label>
+                <input type="number" class="form-control" id="guests" min="1" max="20"
+                    placeholder="Enter number of guests" required>
+            </div>
+            <div class="mb-3">
+                <label for="requests" class="form-label">Special Requests (optional)</label>
+                <textarea class="form-control" id="requests" rows="3"
+                    placeholder="Let us know if you have any special requests"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-text mt-2">
+                You’ll receive a confirmation via email or phone.
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Table booked Successfully</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Thank you for booking a table with us! We look forward to serving you.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+        <section class="container-fluid my-5 px-5">
+            <div class="d-flex flex-column flex-lg-row gap-4 align-items-stretch w-100">
+                <div class="flex-fill d-flex flex-column">
+                    <h2 class="mb-4">Visit Us</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8478079296656!2d72.76952807503629!3d21.198203980493883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04ddcd36c5cfb%3A0xa5b385a9ee98bc1!2sLemon%20Grass%20Garden%20Restaurant!5e0!3m2!1sen!2sin!4v1748759009119!5m2!1sen!2sin"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="flex-fill d-flex flex-column">
+                    <h2 class="mb-4">Opening Hours</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped w-100">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Opening Time</th>
+                                    <th>Closing Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>11:00 AM</td>
+                                    <td>10:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>11:00 AM</td>
+                                    <td>10:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>11:00 AM</td>
+                                    <td>10:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>11:00 AM</td>
+                                    <td>10:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>11:00 AM</td>
+                                    <td>11:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>11:00 AM</td>
+                                    <td>11:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>11:00 AM</td>
+                                    <td>10:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="py-5 text-white bg-dark mt-5 shadow-lg">
+        <div class="container">
+            <div class="row mb-4 align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0 text-md-start text-center">
+                    <h4 class="mb-3 fw-bold"><span class="text-warning">The</span> Spice Garden</h4>
+                    <p class="small mb-2 fst-italic">Authentic flavors, unforgettable experiences.</p>
+                    <span class="badge bg-warning text-dark mb-2">Open Daily: 11am – 11pm</span>
+
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h6 class="mb-3 text-uppercase text-warning">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none"><i
+                                    class="bi bi-house-door me-2 text-warning"></i>Home</a></li>
+                        <li class="mb-2"><a href="menu.html" class="text-white text-decoration-none"><i
+                                    class="bi bi-card-list me-2 text-warning"></i>Menu</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none"><i
+                                    class="bi bi-person me-2 text-warning"></i>About</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i
+                                    class="bi bi-calendar-check me-2 text-warning"></i>Reservation</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none"><i
+                                    class="bi bi-envelope me-2 text-warning"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-md-end text-center">
+                    <h6 class="mb-3 text-uppercase text-warning">Connect With Us</h6>
+                    <div class="mb-3">
+                        <a href="#" class="text-warning me-3 fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-warning me-3 fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-warning me-3 fs-4"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-warning fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                    <p class="small mb-1"><i class="bi bi-geo-alt-fill text-warning"></i> 123 Spice Lane, Food City</p>
+                    <p class="small mb-0"><i class="bi bi-telephone-fill text-warning"></i> +1 234 567 8901</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-md-start text-center">
+                    <p class="mb-0 small">&copy; 2025 <span class="text-warning">The Spice Garden</span>. All rights
+                        reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end text-center">
+                    <p class="mb-0 small">
+                        <a href="https://getbootstrap.com/" class="text-secondary text-decoration-none">Built with
+                            Bootstrap</a> |
+                        <a href="#" class="text-warning text-decoration-underline">Back to top</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+            crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var form = document.getElementById('reservationForm');
+                var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    if (form.checkValidity()) {
+                        modal.show();
+                        form.reset();
+                        form.classList.remove('was-validated');
+                    } else {
+                        form.classList.add('was-validated');
+                    }
+                });
+            });
+        </script>
+</body>
+
+</html>
